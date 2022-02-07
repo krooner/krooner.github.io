@@ -87,7 +87,6 @@ last_edit_time_format: "%b %e %Y at %I:%M %p"
 #       nav_exclude: false
 #       search_exclude: false
 
-
 kramdown:
   syntax_highlighter_opts:
     block:

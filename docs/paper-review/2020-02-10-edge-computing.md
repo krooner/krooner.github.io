@@ -20,16 +20,14 @@ M. Satyanarayanan, ["The Emergence of Edge Computing,"] in Computer, vol. 50, no
 
 ["The Emergence of Edge Computing,"]: https://ieeexplore.ieee.org/abstract/document/7807196
 
-## Origin and background
+## 배경
 ---
-cloud computing
+클라우드 컴퓨팅: 컴퓨팅 파워를 지구상의 여러 대규모 데이터 센터로 통합함
+- 규모의 경제: 시스템 관리 및 운영 비용 감축
+- 자본 지출을 줄임: 대규모 서비스 제공자의 자원을 소비함
 
-- economies of scale: lower the marginal cost of system administration and operations
-- avoid the capital expenditure: consuming resources from a large service provider
-
-→ consolidation of computing capacity into multiple large datacenters across the globe.
-
-computing toward dispersion, edge computing: substantial computing and storage resources are placed at the Internet's edge in close proximity to mobile devices or sensors.
+엣지 컴퓨팅: 분산된 컴퓨팅
+- 상당 부분의 컴퓨팅 및 저장 리소스를 모바일 기기 또는 센서와 가까이 위치한 `인터넷의 엣지`에 위치시킴
 
 industry investment and research interest in edge computing have grown.
 

@@ -1,0 +1,21 @@
+---
+layout: default
+title: Discrete Mathematics
+parent: Coursework
+nav_order: 4
+has_children: true
+# permalink: /docs/discrete-mathematics
+---
+
+# 이산 수학 (Discrete Mathematics)
+---
+분명하거나 (distinct) 연결되지 않은 (unconnected) 요소들로 구성된 이산적인 대상에 대한 학문
+- 컴퓨터 시스템에서 유효한 비밀번호 가짓수
+- 복권에 당첨될 확률
+- 대중 교통을 이용했을 때 두 도시 간의 최단 거리
+- 오름차순으로 정수 리스트를 정렬하는 법
+
+$\rightarrow$ 이러한 문제를 해결하기 위해 필요한 이산 구조와 기술들을 학습
+
+이산 수학이 중요한 이유:
+개체 수를 세거나, 유한한 집합 간의 관계를 보이거나, 유한한 단계로 구성된 프로세스를 분석할 때 사용됨 - 정보는 연산 기계에 의해 이산적으로 저장 및 활용됨
