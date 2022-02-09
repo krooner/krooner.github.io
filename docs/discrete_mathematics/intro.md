@@ -2,9 +2,8 @@
 layout: default
 title: Discrete Mathematics
 parent: Coursework
-nav_order: 4
+nav_order: 1
 has_children: true
-# permalink: /docs/discrete-mathematics
 ---
 
 # 이산 수학 (Discrete Mathematics)

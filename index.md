@@ -5,9 +5,9 @@
 layout: page
 title: Home
 nav_order: 1
-description: "Testing"
 permalink: /
 
 ---
 
-# Welcome
+# BLTN (Better Late Than Never)
+안 하는 것보다는 늦게라도 하는 게 낫다.

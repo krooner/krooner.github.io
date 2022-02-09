@@ -117,24 +117,117 @@ insertion_sort(s, n):
 점근적 분석에서는 `입력 크기`에 따른 `알고리즘의 성능 (실행 시간 또는 공간)`을 평가하는 것.
 - Worst case, Average case, Best case
 
-## 재귀 알고리즘 (Recursive algorithm)
+## 재귀 (Recursion)
+---
 재귀 함수는 자기 자신을 호출하는 함수이며, 재귀 알고리즘은 재귀 함수를 포함하는 알고리즘이다.
+- 예 - factorial $n! = 1\cdot2...\cdot(n-1)\cdot n$
+- $f(n) = 1 \text{ if }n = 0 \text{ else } n\cdot f(n-1)$
 
-분할 정복
+예 - 분할 정복
 - 하나의 문제를 같은 타입의 문제들로 분할한다.
 - 각각의 하위 문제들은 간단히 해결될 수 있을 문제가 될 때까지 계속 분할된다.
 - 하위 문제들의 정답을 결합하여 원래 문제의 정답을 얻는다.
 
-### Factorial
-```python
-Input: n, 0보다 크거나 같은 정수
-Output: n!
+재귀 메소드 구성
+1. Base case
+- 재귀 호출을 수행하지 않을 때의 입력 변수의 값
+- 반드시 적어도 하나의 base case가 존재해야 한다.
+- 재귀 호출은 마지막 단계에서는 반드시 base case에 도달한다.
+2. Recursive calls
+- 현재 메소드에서 호출
+- 각 재귀 호출은 base case를 향해 진행되도록 정의되어야 한다.
 
-factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n-1)
+### 이진 검색 (Binary Search)
+![recursion_1](../../../assets/images/2018-03-07-image-1.png)
+
+정렬된 리스트 (data)에서 특정 정수 값 (target = $22$)을 찾는 것, 다음의 세 가지 경우를 고려할 수 있다.
+1. $target = data[mid]$: target을 찾았음
+- 네 번째 그림에서 $target = data[mid] = 22$
+2. $target < data[mid]$: data 시퀀스의 첫 번째 절반 서브시퀀스에 재귀 수행
+- 두 번째 그림에서 $target < data[mid] = 25$
+3. $target > data[mid]$: data 시퀀스의 두 번째 절반 서브시퀀스에 재귀 수행
+- 첫 번째 그림에서 $target > data[mid] = 14$
+- 세 번째 그림에서 $target > data[mid] = 19$
+
+$O(\log n)$의 시간복잡도를 갖는다.
+- 리스트의 길이 $high - low + 1$
+- 비교를 한 번 수행한 이후,
+  - (target < data[mid] 인 경우) $(mid - 1) - low + 1 = \lfloor\frac{low+high}{2}\rfloor - low \leq \frac{high-low+1}{2}$
+  - (target > data[mid] 인 경우) $high - (mid+1) + 1 = high - \lfloor \frac{low+high}{2}\rfloor \leq\frac{high-low+1}{2}$
+- 각 재귀 호출은 검색 영역을 반으로 줄이기 때문에 $\log n$ 으로 간주된다.
+
+### 멱함수 (Power Function)
+$p(x,n)=x^{n}$는 재귀적으로 정의할 수 있다: <br>
+$p(x,n)=1 \text{ if }n=0 \text{ else }x\cdot p(x,n-1)$
+- $O(n)$의 시간복잡도를 갖는다.
+
+더 효율적으로 정의할 수 있다.
+```python
+def power(x, n):
+  # Input: a number x and an integer n
+  # Output: the value
+  if n == 0:
+    return 1
+  if n%2 == 1:
+    y = power(x, (n-1)/2)
+    return x*y*y # 호출을 두 번하는 것이 아니라,
+  else:
+    y = power(x, n/2)
+    return y*y # 동일 변수를 두 번 사용
+```
+- $p(x,n) = 1 \text{ if }x=0$ <br>
+$p(x,n) = x\cdot p(x, (\frac{n-1}{2}))^{2} \text{ if }x>0 \wedge x\%2=1$ <br>
+$p(x,n) = x\cdot p(x, (\frac{n}{2}))^{2} \text{ if }x>0 \wedge x\%2=0$
+- 재귀 호출을 할 때마다 $n$의 값이 반이 되기 때문에 $\log n$번의 재귀 호출을 하게 된다.
+
+### Tail Recursion
+선형적인 재귀 메소드 (linearly recursive method)가 마지막 단계에서 재귀 호출을 할 때 발생하며, 재귀 방식이 아닌 메소드로 바꿀 수 있다 (리소스 저장 필요).
+```python
+def iterative_reverse_array(A, i, j):
+  # Input: 배열 A, 음수가 아닌 정수 인덱스 i와 j
+  # Output: 배열 A의 원소들의 역배열
+  while i < j:
+    swap(A[i], A[j])
+    i = i + 1
+    j = j - 1
+  return
 ```
 
-### 피보나치 수 (Fibonacci number)
-$f_{1}=1, f_{2}=2, f_{n}=f_{n-1}+f_{n-2} ~(n\geq3)$
+### Binary Recursion
+각 non-base case에서 두 개의 재귀 호출이 존재하는 경우로, 정수 배열 $A$의 수를 전부 더한다고 하자.
+```python
+def binary_sum(A, i, n):
+  # Input: 배열 $A$와 정수 i와 n
+  # Output: 배열 $A$ 내 n개의 정수 합
+  if n = 1:
+    return A[i]
+  return binary_sum(A, i, n/2) + binary_sum(A, i + n/2, n/2)
+```
+
+![recursion_2](../../../assets/images/2018-03-07-image-2.png)
+
+### 피보나치 수 (Fibonacci Numbers)
+$F_{0}=0, F_{1}=1, F_{i}=F_{i-1}+F_{i-2} ~(i>1)$
+
+첫 번째 재귀함수
+```python
+def binary_fib(k):
+  # Input: 음수가 아닌 정수 k
+  # Output: k번째 피보나치 수
+  if k == 1:
+    return k
+  return binary_fib(k-1) + binary_fib(k-2)
+```
+* $n_{k}$를 binary_fib(k)의 재귀호출 수라고 했을 때, $n_{k}$는 k가 1씩 증가할 때마다 거의 두 배가 된다: $n_{k} > 2^{\frac{k}{2}}$이므로 exponential.
+
+두 번째 재귀함수
+```python
+def linear_fibonacci(k):
+  # Input: 음수가 아닌 정수 k
+  # Output: 피보나치 수 쌍 (f(k), f(k-1))
+  if k == 1:
+    return (k, 0)
+  i, j = linear_fibonacci(k-1)
+  return (i+j, i)
+```
+* $k-1$번의 재귀호출이 발생한다.
