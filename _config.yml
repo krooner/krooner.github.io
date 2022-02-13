@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "BLTN" # 사이트 상단에 표시되는 타이틀
-# name: "Better Late Than Never" # 사이트 이름
+name: "BLTN" # 사이트 이름
 description: "Better Late Than Never" # 사이트 설명으로 SEO와 관계된 정보
 url: "https://krooner.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: # the subpath of your site, e.g. /blog
