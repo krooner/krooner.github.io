@@ -17,12 +17,14 @@ date:   2022-02-14 10:41:00 +0900
 {:toc}
 </details>
 
-## UNION
+## UNION and UNION ALL
 ---
+### UNION
 중복되는 행 **미포함**
 
+예 - 국가의 모든 수상과 군주를 추출 (수상과 군주가 동일 사람이면 한번만)
+
 ```sql
--- 국가의 모든 수상과 군주를 추출 (수상과 군주가 동일 사람이면 한번만)
 SELECT prime_minister AS leader, country
 FROM prime_ministers
 UNION
@@ -45,12 +47,12 @@ OUTPUT
 | Qaboos bin Said al Said | Oman      |
 
 
-## UNION ALL
----
+### UNION ALL
 중복되는 행 **포함**
 
+예 - 국가의 모든 수상과 군주 (수상과 군주가 동일 사람이어도 출력)
+
 ```sql
--- 국가의 모든 수상과 군주 (수상과 군주가 동일 사람이어도 출력)
 SELECT prime_minister AS leader, country
 FROM prime_ministers
 UNION ALL
@@ -76,8 +78,9 @@ OUTPUT
 
 ## INTERSECT
 ---
+예 - 수상과 대통령이 모두 있는 나라
+
 ```sql
--- 수상과 대통령이 모두 있는 나라
 SELECT country
 FROM prime_ministers
 INTERSECT
@@ -94,9 +97,9 @@ OUTPUT
 |Haiti|
 |Egypt|
 
-### 두 개 이상의 field에 대해
+예 - 나라의 수상과 대통령이 같은 사람인 경우
+
 ```sql
--- 나라의 수상과 대통령이 같은 사람인 경우
 SELECT country, prime_minister AS leader
 FROM prime_ministers
 INTERSECT
@@ -112,8 +115,9 @@ OUTPUT
 
 ## EXCEPT
 ---
+예 -  나라의 수상은 아닌 군주
+
 ```sql
---- 나라의 수상은 아닌 군주
 SELECT monarch, country
 FROM monarchs
 EXCEPT
@@ -129,10 +133,11 @@ OUTPUT
 |Felipe VI|Spain|
 
 ## Semi-joins and Anti-joins
-
+---
 ### Semi-join
+예 - "독립을 1800년 이전에 한 나라"의 대통령, 나라, 대륙명
+
 ```sql
--- "독립을 1800년 이전에 한 나라"의 대통령, 나라, 대륙명
 SELECT president, country, continent
 FROM presidents
 WHERE country IN
@@ -148,8 +153,9 @@ OUTPUT
 |Marcelo Rebelo de Sousa|Portugal|Europe|
 
 ### Anti-join
+예 -- 'America'로 끝나는 대륙에 있으면서 "1800년 이전에 독립한 나라가 아닌" 나라의 대통령, 나라, 대륙명
+
 ```sql
---- 'America'로 끝나는 대륙에 있으면서 "1800년 이전에 독립한 나라가 아닌" 나라의 대통령, 나라, 대륙명
 SELECT president, country, continent
 FROM presidents
 WHERE continent LIKE '%America'

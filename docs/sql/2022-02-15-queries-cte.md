@@ -19,16 +19,16 @@ date:   2022-02-15 14:51:00 +0900
 
 ## 상관 쿼리 (Correlated Subquery)
 ---
-1. 결과를 생성하기 위해 외부 (Outer) 쿼리의 값을 사용함.
-2. 최종 데이터셋에서 생성되는 모든 행에 대해 재실행됨.
-3. Advanced Joining, filtering and evaluating data에 사용됨.
+결과를 생성하기 위해 외부 (Outer) 쿼리의 값을 사용하며, 최종 데이터셋에서 생성되는 모든 행에 대해 재실행됨.
+- Advanced Joining, filtering and evaluating data에 사용됨.
 
 ### Simple VS Correlated
 Simple subquery는 메인 쿼리와 독립적으로 수행되며, 전체 쿼리에서 한번만 실행된다.
 
 Correlated subquery는 메인 쿼리에 의존적이며, 반복적으로 (in loops) 실행되므로 **쿼리 실행시간을 크게 증가시킨다**.
 
-### 각 나라별 평균 득점 수
+예 - 각 나라별 평균 득점 수
+
 ```sql
 SELECT
   c.name AS country,
@@ -57,7 +57,8 @@ OUTPUT
 | Spain|2.78|
 | Switzerland | 2.81054131054131 |
 
-### 2012/13 시즌 라운드 별 평균 득점을 초과한 라운드 및 득점 수
+예 - 2012/13 시즌 라운드 별 평균 득점을 초과한 라운드 및 득점 수
+
 ```sql
 SELECT
     s.stage,
@@ -91,7 +92,8 @@ OUTPUT
 ---
 또 다른 서브쿼리 내의 서브쿼리로, 데이터 변형 (Transformation)이 여러 번 (multiple layers) 수행된다.
 
-### 월별 총 득점 수 - 월별 평균 총 득점
+예 - (월별 총 득점 수 - 월별 평균 총 득점)
+
 ```sql
 SELECT
   EXTRACT(MONTH FROM date) AS month,
@@ -118,7 +120,8 @@ OUTPUT
 
 ## 상관 및 중첩 쿼리 (Correlated nested subqueries)
 ---
-### 2011/12 시즌 각 나라별 평균 득점 수
+예 - 2011/12 시즌 각 나라별 평균 득점 수
+
 ```sql
 SELECT
   c.name AS country,
@@ -149,13 +152,13 @@ OUTPUT
 | Spain|2.7631...|
 | Switzerland | 2.62345679012346 |
 
-## Common Table Expressions
+## Common Table Expressions (CTE)
 ---
 서브쿼리를 추가할 때, Query complexity는 빠르게 증가하기 때문에 필요한 정보를 트래킹하기 어려워질 수 있다.
 1. 메인 쿼리 이전에 선언되는 테이블
 2. `FROM` 문에서 명명되고 참조됨
 
-### CTE를 쓰는 이유
+CTE를 쓰는 이유
 1. 한번만 실행됨: 메모리에 저장되어 쿼리 성능을 향상시킴
 2. 쿼리 구성 (Organization of queries)을 향상시킴
 3. 다른 CTE를 참조하고, 자기 자신을 참조 (Self-join)할 수도 있음
@@ -169,7 +172,8 @@ SELECT
 FROM cte;
 ```
 
-### 국가별 경기 득점이 10골 이상인 경기과 1골 이하인 경기 수
+예 - 국가별 경기 득점이 10골 이상인 경기과 1골 이하인 경기 수
+
 ```sql
 WITH s1 AS (
   SELECT country_id, id
