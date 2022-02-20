@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "상관 및 중첩 쿼리 (Correlated and Nested), CTE"
-parent: SQL
+parent: SQL Fundamentals
+grand_parent: DataCamp
 nav_order: 6
 date:   2022-02-15 14:51:00 +0900
 ---

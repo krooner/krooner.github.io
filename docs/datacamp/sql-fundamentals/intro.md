@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SQL
-nav_order: 4
+title: SQL Fundamentals
+nav_order: 1
 has_children: true
-permalink: /docs/sql
+parent: DataCamp
 ---
-# Structured Query Language
+# SQL Fundamentals
 [DataCamp]의 SQL Fundamentals (PostgreSQL-based)
 
 [DataCamp]: https://app.datacamp.com/learn/skill-tracks/sql-fundamentals

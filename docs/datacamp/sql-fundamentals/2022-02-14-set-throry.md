@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "집합 연산 (UNION, INTERSECT, EXCEPT)"
-parent: SQL
+parent: SQL Fundamentals
+grand_parent: DataCamp
 nav_order: 3
 date:   2022-02-14 10:41:00 +0900
 ---

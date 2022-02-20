@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Full-text Search"
-parent: SQL
+parent: SQL Fundamentals
+grand_parent: DataCamp
 nav_order: 10
 date:   2022-02-17 22:52:00 +0900
 ---

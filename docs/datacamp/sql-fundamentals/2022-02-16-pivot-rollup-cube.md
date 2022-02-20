@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "유용한 함수들"
-parent: SQL
+parent: SQL Fundamentals
+grand_parent: DataCamp
 nav_order: 8
 date:   2022-02-16 19:47:00 +0900
 ---
