@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Literacy Fundamentals
-nav_order: 2
+nav_order: 1
 parent: DataCamp
 has_children: true  
 ---

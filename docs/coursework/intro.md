@@ -1,7 +1,7 @@
 ---
 title: Coursework
 layout: default
-nav_order: 99
+nav_order: 7
 has_children: true
 permalink: /docs/coursework
 ---
