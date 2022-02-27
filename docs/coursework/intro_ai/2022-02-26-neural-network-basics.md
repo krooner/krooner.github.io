@@ -28,7 +28,7 @@ AI의 목표는 `계산가능한 함수를 이용하여 지능의 구성요소�
 
 $\hat{y}=f(x;w, b)=w_{1}x_{1}+w_{2}x_{2}+b$
 <br>
-$\hat{y}=w^{T}x+b \text{ where } w=\begin{bmatrix} w_{1} \\ w_{2} \end{bmatrix}, x=\begin{bmatrix} x_{1} \\ x_{2} \end{bmatrix}$
+$\hat{y}=w^{T}x+b \text{ where } w=\begin{bmatrix} w_{1} \newline w_{2} \end{bmatrix}, x=\begin{bmatrix} x_{1} \newline x_{2} \end{bmatrix}$
 
 매개변수가 함수를 특정짓는다 (characterize)
 - $x$ (입력값): $x_{1}, x_{2}$
