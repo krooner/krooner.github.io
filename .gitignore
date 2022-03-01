@@ -6,3 +6,6 @@ vendor
 Gemfile
 Gemfile.lock
 .DS_Store
+
+.ipynb
+.zip
