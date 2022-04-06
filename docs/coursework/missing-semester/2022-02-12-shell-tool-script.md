@@ -2,6 +2,7 @@
 layout: post
 title:  "셸 도구와 셸 스크립팅"
 parent: missing-semester
+grand_parent: Coursework
 nav_order: 2
 date:   2022-02-13 17:11:00 +0900
 ---
