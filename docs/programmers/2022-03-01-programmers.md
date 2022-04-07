@@ -1,14 +1,29 @@
 ---
 layout: post
-title:  "2022-03-02"
+title:  "프로그래머스"
 parent: Coding Test
-nav_order: 2
-date:   2022-03-02 20:45:50 +0900
+nav_order: 1
+date:   2022-03-01 11:59:50 +0900
 ---
-# Level 1 (Finish)
-
+# Level 1 (-ing)
+---
 ## 푼 문제
----
+- [신고결과받기](https://programmers.co.kr/learn/courses/30/lessons/92334) 
+- [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) 
+- [신고 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410) 
+- [없는 숫자 누르기](https://programmers.co.kr/learn/courses/30/lessons/86051) 
+- [내적](https://programmers.co.kr/learn/courses/30/lessons/70128) 
+- [완주하지 못한 선수](https://programmers.co.kr/learn/courses/30/lessons/42576) 
+- [모의고사](https://programmers.co.kr/learn/courses/30/lessons/42840) 
+- [폰켓몬](https://programmers.co.kr/learn/courses/30/lessons/1845) 
+- [약수의 갯수와 덧셈](https://programmers.co.kr/learn/courses/30/lessons/77884) 
+- [예산](https://programmers.co.kr/learn/courses/30/lessons/12982) 
+- [로또의 최고 순위와 최저 순위](https://programmers.co.kr/learn/courses/30/lessons/77484) 
+- [숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301) 
+- [크레인 인형 뽑기](https://programmers.co.kr/learn/courses/30/lessons/64061) 
+- [음양 더하기](https://programmers.co.kr/learn/courses/30/lessons/76501) 
+- [소수 만들기](https://programmers.co.kr/learn/courses/30/lessons/12977) 
+- [K번째수](https://programmers.co.kr/learn/courses/30/lessons/42748)
 - [체육복](https://programmers.co.kr/learn/courses/30/lessons/42862) 
     - 문제를 잘 읽자.
 - [최소직사각형](https://programmers.co.kr/learn/courses/30/lessons/86491) 
@@ -35,3 +50,14 @@ date:   2022-03-02 20:45:50 +0900
 - [문자열 다루기 기본](https://programmers.co.kr/learn/courses/30/lessons/12918) 
 - [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/12921) 
 - [이상한 문자 만들기](https://programmers.co.kr/learn/courses/30/lessons/12930)
+
+# Level 2
+---
+## 푼 문제
+- [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)
+- [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
+- [최댓값과 최솟값](https://programmers.co.kr/learn/courses/30/lessons/12939)
+- [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
+
+## 못 푼 문제
+- [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
