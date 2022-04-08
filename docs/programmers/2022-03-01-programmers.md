@@ -5,9 +5,20 @@ parent: Coding Test
 nav_order: 1
 date:   2022-03-01 11:59:50 +0900
 ---
-# Level 1 (-ing)
+# Programmers
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    목차
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+## Level 1 (-ing)
 ---
-## 푼 문제
 - [신고결과받기](https://programmers.co.kr/learn/courses/30/lessons/92334) 
 - [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) 
 - [신고 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410) 
@@ -51,13 +62,12 @@ date:   2022-03-01 11:59:50 +0900
 - [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/12921) 
 - [이상한 문자 만들기](https://programmers.co.kr/learn/courses/30/lessons/12930)
 
-# Level 2
+## Level 2
 ---
-## 푼 문제
 - [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)
 - [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
 - [최댓값과 최솟값](https://programmers.co.kr/learn/courses/30/lessons/12939)
 - [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
 
-## 못 푼 문제
+### Solving
 - [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
