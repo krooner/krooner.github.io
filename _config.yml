@@ -24,7 +24,7 @@ description: "Better Late Than Never" # 사이트 설명으로 SEO와 관계된 
 url: "https://krooner.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: # the subpath of your site, e.g. /blog
 
-color_scheme: dark
+# color_scheme: dark
 
 # Build settings
 # theme: minima
