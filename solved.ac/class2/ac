@@ -1,0 +1,12 @@
+#!/bin/bash
+
+foo=$1
+gcc -o ${foo%.c} ${foo}
+
+if [ "$?" -eq 0 ] 
+then
+	echo "Successfully compiled and will be executed."
+	./${foo%.c}
+else
+	echo "Compile Error."
+fi
