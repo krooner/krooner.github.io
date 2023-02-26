@@ -6,8 +6,7 @@ layout: page
 title: Home
 nav_order: 1
 permalink: /
-
 ---
 
-# BLTN (Better Late Than Never)
-안 하는 것보다는 늦게라도 하는 게 낫다.
+# I'm a data scientist.
+나는 데이터 과학자다.
