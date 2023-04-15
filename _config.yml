@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "I'm a data scientist." # 사이트 상단에 표시되는 타이틀
-name: "ima-data-scientist" # 사이트 이름
+title: "a Data Scientist." # 사이트 상단에 표시되는 타이틀
+name: "a-data-scientist" # 사이트 이름
 description: "a blog of data scientist" # 사이트 설명으로 SEO와 관계된 정보
 url: "https://krooner.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: # the subpath of your site, e.g. /blog

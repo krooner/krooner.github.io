@@ -8,5 +8,4 @@ nav_order: 1
 permalink: /
 ---
 
-# I'm a data scientist.
-나는 데이터 과학자다.
+# 데이터 과학자 블로그
