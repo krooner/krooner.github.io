@@ -54,6 +54,7 @@ $h_{t}=f(h_{t-1}, x_{t})$
 ## Model Architecture
 
 > the _encoder_ maps __an input sequence of symbol representations__ $\textbf{x} = [x_{1}, x_{2}, ... x_{n}]$ to __a sequence of continuous representations__ $\textbf{z} = (z_{1}, z_{2}, ... z_{n})$.
+
 - Encoder $ E: \textbf{x} \rightarrow \textbf{z}$
 
 > Given $z$, the _decoder_ then generates __an output sequence of symbols__ $\textbf{y} = [y_{1}, y_{2}, ... y_{m}]$ one element at a time. At each step the model is auto-regressive, consuming the previously generated symbols as additional input when generating the next.
@@ -67,7 +68,6 @@ $h_{t}=f(h_{t-1}, x_{t})$
 > The encoder is composed to a stack of $N=6$ indentical layers. Each layer has __two sub-layers ... a multi-head self-attention mechanism, and ... a simple, position-wise fully connected feed-forward network.__
 
 > We employ __a residual connection around each of the two sub-layers, followed by layer normalization.__ That is, the output of each sub-layer is $\text{LayerNorm}(x + \text{Sublayer}(x))$ ... to facilitate these residual connections, __all sub-layers in the model, as well as the embedding layers, produce outputs of dimension__ $d_{model}=512$.
-
 
 - Stacked Encoder
 - Each stack is composed of two sub-layers
@@ -115,8 +115,10 @@ $Attention(Q,K,V) = \text{softmax}(\frac{QK^{T}}{\sqrt{d_{k}}})V$
 
 > On each of these projected versions of queries, keys and values we then __perform the attention function in parallel, yielding $d_{v}$-dimensional output values.__ These are concatenated and once again projected, resulting in the final values. Multi-head attention allows the model to __jointly attend to information from different representation subspaces at different positions.__
 
-$\text{MultiHead}(Q,K,V)=\text{Concat}(\text{head}_{1}, ..., \text{head}_{h})W^{O}$<br>
+$\text{MultiHead}(Q,K,V)=\text{Concat}(\text{head}_{1}, ..., \text{head}_{h})W^{O}$
+
 $\text{where } \text{head}_{i}=\text{Attention}(QW_{i}^{Q}, KW_{i}^{K}, VW_{i}^{V})$
+
 - a weight of $Q$ w.r.t. head $i$ = $W_{i}^{Q} \in \textbf{R}^{d_{model}\times d_{k}}$
 - a weight of $K$ w.r.t. head $i$ = $W_{i}^{K} \in \textbf{R}^{d_{model}\times d_{k}}$
 - a weight of $V$ w.r.t. head $i$ = $W_{i}^{V} \in \textbf{R}^{d_{model}\times d_{v}}$
