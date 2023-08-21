@@ -1,7 +1,7 @@
 ---
 title: "PT"
 layout: post
-parent: Log
+# parent: log
 # grand_parent: Log
 nav_order: 1
 date:   2023-08-21 11:00:00 +0900
