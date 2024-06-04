@@ -21,8 +21,13 @@ I want to make services that change user's life in a positive way using their li
     - Research Topic: Human Activity Recognition, Activity Transition Detection
 
 ## Publications
-- (Master Thesis) _Correlated-based Real-time Group Activity Segmentation using Motion Sensors_
-- (Publication) [_A Correlation-based Real-time Segmentation Scheme for Multi-user Collaborative Activities (IEEE COMPSAC 2022)_](https://ieeexplore.ieee.org/abstract/document/9842485/)
+### Master Thesis
+_Correlated-based Real-time Group Activity Segmentation using Motion Sensors_
+
+### Publication 
+- [_K. Kim, H. Kim and D. Lee, "A Correlation-based Real-time Segmentation Scheme for Multi-user Collaborative Activities," 2022 IEEE 46th Annual Computers, Software, and Applications Conference (COMPSAC)._](https://doi.org/10.1109/COMPSAC54236.2022.00150)
+
+- [_Kim, H., Kim, G., Lee, T. et al. A dataset of ambient sensors in a meeting room for activity recognition. Sci Data 11, 516 (2024)._](https://doi.org/10.1038/s41597-024-03344-7)
 
 ## Interests
 - _Human Activity Recognition, Customer Segmentation, Smart Home_

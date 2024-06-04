@@ -17,9 +17,9 @@ date:   2022-02-04 10:45:00 +0900
 
 ## 인간 행동 인지 (Human Activity Recognition, HAR)
 ---
-![har_1](../../../assets/images/2022-02-04-image-1.png "Image 1")
+![har_1](../../../../assets/images/2022-02-04-image-1.png "Image 1")
 &nbsp;
-![har_2](../../../assets/images/2022-02-04-image-2.png "Image 2")
+![har_2](../../../../assets/images/2022-02-04-image-2.png "Image 2")
 [_Image 1_], [_Image 2_]
 
 사용자로부터 발생되는 데이터 (e.g. 비디오, 웨어러블 센서) 를 활용하여 사용자의 현재 행동 (`Human Activity`) 을 분류 및 인지 (`Recognition`) 하는 기술. 대략적인 과정은 다음과 같다.
@@ -41,7 +41,7 @@ date:   2022-02-04 10:45:00 +0900
 
 ## 행동 분할 (Activity Segmentation)
 ---
-![har_3](../../../assets/images/2022-02-04-image-3.png "Image 3")
+![har_3](../../../../assets/images/2022-02-04-image-3.png "Image 3")
 
 HAR의 `Segmentation` 과정. 
 * __인지 모델 학습 및 추론 결과의 정확도를 높이기 위해서는 행동 분할의 결과가 중요__

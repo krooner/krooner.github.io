@@ -138,7 +138,7 @@ insertion_sort(s, n):
 - 각 재귀 호출은 base case를 향해 진행되도록 정의되어야 한다.
 
 ### 이진 검색 (Binary Search)
-![recursion_1](../../../assets/images/2018-03-07-image-1.png)
+![recursion_1](../../../../assets/images/2018-03-07-image-1.png)
 
 정렬된 리스트 (data)에서 특정 정수 값 (target = $22$)을 찾는 것, 다음의 세 가지 경우를 고려할 수 있다.
 1. $target = data[mid]$: target을 찾았음
@@ -204,7 +204,7 @@ def binary_sum(A, i, n):
   return binary_sum(A, i, n/2) + binary_sum(A, i + n/2, n/2)
 ```
 
-![recursion_2](../../../assets/images/2018-03-07-image-2.png)
+![recursion_2](../../../../assets/images/2018-03-07-image-2.png)
 
 ### 피보나치 수 (Fibonacci Numbers)
 $F_{0}=0, F_{1}=1, F_{i}=F_{i-1}+F_{i-2} ~(i>1)$
