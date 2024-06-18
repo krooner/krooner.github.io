@@ -1,5 +1,5 @@
 ---
-title: Study
+title: '2. Work (2023~)'
 layout: default
 nav_order: 40
 has_children: true

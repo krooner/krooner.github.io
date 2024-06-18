@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Data Science
-parent: School
+title: 'DataCamp: Data Science'
+parent: '1. School (~2022)'
 nav_order: 50
 has_children: true
 ---

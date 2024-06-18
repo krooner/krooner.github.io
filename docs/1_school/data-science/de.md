@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "Data Engineering"
-parent: Data Science
-grand_parent: School
+parent: 'DataCamp: Data Science'
+grand_parent: '1. School (~2022)'
 nav_order: 4
 date:   2022-02-23 13:55:00 +0900
 ---
 # 데이터 엔지니어링이란
 {: .no_toc }
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     목차
   </summary>
@@ -18,22 +18,8 @@ date:   2022-02-23 13:55:00 +0900
 {:toc}
 </details>
 
-## 개요
----
-1. 데이터 엔지니어링이란
-  - 데이터 엔지니어
-  - 데이터 파이프라인
-2. 데이터 저장 방식
-  - 정형 및 비정형 데이터, SQL
-  - 데이터 웨어하우스와 데이터 레이크
-3. 데이터 이동 및 처리 방식
-  - 데이터 처리 및 스케줄링
-  - 병렬 컴퓨팅과 클라우드 컴퓨팅
-
-## 데이터 엔지니어링
----
-데이터 워크플로우
-- `데이터 수집 및 저장` - 데이터 준비 - 관찰 및 시각화 - 실험 및 예측
+## 데이터 워크플로우
+데이터 수집 및 저장 $\rightarrow$ 데이터 준비 $\rightarrow$ 관찰 및 시각화 $\rightarrow$ 실험 및 예측
 
 ### 데이터 엔지니어
 `정확한 데이터`를 `올바른 형태`로 `요청자`에게 `효율적으로` 보낸다
