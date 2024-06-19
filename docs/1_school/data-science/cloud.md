@@ -5,6 +5,7 @@ parent: 'DataCamp: Data Science'
 grand_parent: '1. School (~2022)'
 nav_order: 5
 date:   2022-02-24 13:55:00 +0900
+last_modified_date: 2024-06-18
 ---
 # 클라우드 컴퓨팅
 {: .no_toc }
@@ -59,8 +60,6 @@ date:   2022-02-24 13:55:00 +0900
 |장점|고비용의 온프레미스를 대체하여 확장가능성 추가|앱 개발할 때 필요한 초기 과정을 생략|컴퓨터에 SW 설치할 필요 없음|
 |사용자|시스템 관리자|개발자|사용자|
 |예|클라우드 서버 (AWS, Azure, Google Compute Engine)|웹/로직 앱 (Google App Engine, Microsoft Azure, AWS Elastic Beanstalk)|인터넷 앱 (Google G Suite, MS Office 365, Dropbox)|
-
-![cloud_1](../../../../assets/images/2022-02-22-image-1.png){:style="display:block; margin-left:auto; margin-right:auto; width: 500px"}
 
 > 다른 클라우드 서비스 모델
 > - FaaS (Function as a Service, SW의 일부인 function에 초점을 맞추며 개인 인증이나 지불 거래 등)
