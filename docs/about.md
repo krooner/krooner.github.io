@@ -1,5 +1,5 @@
 ---
-title: 0. About
+title: About
 layout: page
 permalink: /about/
 nav_order: 2

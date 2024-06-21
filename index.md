@@ -6,8 +6,8 @@ layout: page
 title: Home
 nav_order: 1
 permalink: /
-last_modified_date: 2024-06-04 18:00:00
+last_modified_date: 2024-06-04
 ---
 
-# 잊어먹을까봐 적는 기술 블로그
+# 잊어먹을까봐 적는 공부 블로그
 🧐
