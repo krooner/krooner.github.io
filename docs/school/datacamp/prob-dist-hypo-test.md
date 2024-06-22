@@ -1,12 +1,12 @@
 ---
-title: "ANOVA"
+title: "Distribution and Hypothesis"
 layout: post
-parent: Statistics
+parent: DataCamp
 grand_parent: 'School (2013-2022)'
 date:   2022-03-23 21:03:00 +0900
 last_modified_date: 2024-06-21
 ---
-# 확률 분포 및 가설 검정
+# 확률 분포와 가설 검정
 {: .no_toc }
 
 <details markdown="block">
@@ -18,7 +18,7 @@ last_modified_date: 2024-06-21
 {:toc}
 </details>
 
-연구자가 숫자를 사용할 때; 데이터를 수량화하고 설명, 시각화, 통계 모델링하기 위한 도구로 통계를 이용한다
+연구자가 숫자를 사용하기 위해 데이터를 수량화하고 설명, 시각화, 통계 모델링하기 위한 도구로 통계를 이용한다
 
 > 80명의 시험 성적 데이터에서 패턴 찾기
 > 1. 도수분포표로 재배열한다
@@ -29,7 +29,7 @@ last_modified_date: 2024-06-21
 
 ## 확률 분포
 
-### Normal Distribution 정규 분포
+### Normal Distribution
 
 정규성 테스트를 통해 데이터셋이 정규분포로 잘 모델링 되었는지 결정
 
@@ -38,7 +38,7 @@ last_modified_date: 2024-06-21
 > - $H_a$: Population이 정규 분포를 이루지 않는다 - Otherwise, fail to reject $H_0$ (정규 분포를 이룬다)
 
 평균의 샘플링 분포
-- 샘플링 데이터는 전체를 충분히 대표하며 정확한 일반화가 가능하다 $\rightarrow \bar{X}$로부터 $\mu$ 를 추론
+- 샘플링 데이터는 전체를 충분히 대표하며 정확한 일반화가 가능하다; $\bar{X}$로부터 $\mu$ 를 추론
 - Population: 우리가 알고 싶은 것, $(\mu, \sigma^2)$
 - Sample: 우리가 분석하는 것, $(\bar{X}, s^2)$
 - 평균의 샘플링 분포는 정규 분포에 근사하며, 평균의 샘플링 분포의 `mean`은 true population mean과 같다
@@ -59,7 +59,7 @@ $z$-score (standard score)
 |95%|$z=\pm1.96$|
 |99%|$z=\pm2.58$|
 
-### t-Distribution t-분포
+### t-Distribution
 - `샘플 사이즈가 작을 때` 또는 $\sigma$를 모를 때 활용하며, 통계학자들은 $t$-score를 활용한다
 - 샘플 평균 ($\bar{X}$)에 대한 신뢰 구간: $\bar{X}\pm t_{1-\frac{\alpha}{2},n-1}\frac{s}{\sqrt{n}}$
     - $s$: 샘플의 표준 편차
@@ -79,13 +79,13 @@ Two-sample student's t-test
 
 ## 가설 검정
 
-- 가설이란 알려진 데이터에 대한 일관된 명제이며 아직 참인지 거짓인지 검증되지 않음
-- 주어진 가설이 참인 확률을 결정하기 위해 통계적으로 접근한다
-  - $H_{0}$, null hypothesis: 참이라는 가정 아래, Reject될 가능성을 검증하기 위한 통계 가설
-  - $H_{a}$, alternative hypothesis: $H_{0}$과 반대되며, 관찰 결과가 실제 효과로 나타날 때 채택된다
-- 검증 방식
-  - $p$-value를 $\alpha$ (acceptable significance value)와 비교
-  - $p\le\alpha$이면 관찰된 effect는 통계적으로 유의미하다: $H_{0}$는 Reject되고 $H_{a}$가 Accept된다
+가설이란 알려진 데이터에 대한 일관된 명제이며 아직 참인지 거짓인지 검증되지 않은 것. 주어진 가설이 참인 확률을 결정하기 위해 통계적으로 접근한다
+- $H_{0}$, null hypothesis: 참이라는 가정 아래, Reject될 가능성을 검증하기 위한 통계 가설
+- $H_{a}$, alternative hypothesis: $H_{0}$과 반대되며, 관찰 결과가 실제 효과로 나타날 때 채택된다
+
+검증 방식
+- $p$-value를 $\alpha$ (acceptable significance value)와 비교
+- $p\le\alpha$이면 관찰된 effect는 통계적으로 유의미하다: $H_{0}$는 Reject되고 $H_{a}$가 Accept된다
 
 > 유의 수준 $\alpha$
 > - 통계에서 `significant` = `probably true` (`high significant` = `very probably true`)
@@ -116,7 +116,7 @@ Two-sample student's t-test
 3. $F$-test 결과를 분석한다
 4. Tukey HSD (Honestly significant difference) Post-hoc test
 
-> Two-way ANOVA: `한 연속 종속 변수`에 대한 `두 개의 서로 다른 카테고리 독립 변수의 영향`을 분석: 두 개의 요인 (A, B)과 종속 변수 (D)에 대한 가설
+> Two-way ANOVA: `하나의 연속 종속 변수`에 대한 `두 개의 서로 다른 카테고리 독립 변수의 영향`을 분석하며, 두 개의 요인 (A, B)과 종속 변수 (D)에 대한 가설을 검증한다.
 > - Interaction effect $H_0:$ A, B 간 상호작용은 D에 유의한 영향을 주지 않는다
 > - Main effect
 >    - $A:$ A는 D에 유의한 영향을 주지 않는다
@@ -127,23 +127,15 @@ Two-sample student's t-test
 - Factor 2: 나이 (10, 11, 12)
 
 1. Main effect hypothesis
-  - 성별
-      - $H_0:$ 성별은 학생 점수에 유의한 효과를 주지 않는다
-      - $H_a$
-  - 나이
-      - $H_0:$ 나이는 학생 점수에 유의한 효과를 주지 않는다
-      - $H_a$
+  - 성별 $H_0$ 성별은 학생 점수에 유의한 효과를 주지 않는다 / $H_a$
+  - 나이 $H_0$ 나이는 학생 점수에 유의한 효과를 주지 않는다 / $H_a$
 2. Interaction effect hypothesis
-  - $H_0:$ 성별과 나이의 상호작용은 학생 점수에 유의한 효과를 주지 않는다
-  - $H_a$
+  - $H_0$ 성별과 나이의 상호작용은 학생 점수에 유의한 효과를 주지 않는다 / $H_a$
 
-## Chi-square
+### Chi-square
 
-### 적합도 검정 (Goodness of Fit)
-
-관찰된 샘플 분포를 기대 확률 분포와 비교하기 위해 사용되며, 모집단 (Population)의 단일 카테고리 변수에 대해 적용하는 검정
-- $H_0$: 관찰값과 기댓값 사이에 유의한 차이가 없다
-- $H_a$: 관찰값과 기댓값 사이에 유의한 차이가 있다
+적합도 검정 (Goodness of Fit): 관찰된 샘플 분포를 기대 확률 분포와 비교하기 위해 사용하며, 모집단 (Population)의 단일 카테고리 변수에 대해 적용하는 검정이다.
+- $H_0$: 관찰값과 기댓값 사이에 유의한 차이가 없다 / $H_a$: 관찰값과 기댓값 사이에 유의한 차이가 있다
 - $\chi^2$ 분포가 사용된다
     - $df=k-1$, $k$는 카테고리 수
     - $E=\frac{n}{k}$, $n$은 전체 frequency
@@ -158,14 +150,12 @@ $\chi^2=\sum_{i=1}^{n}\frac{(O_i - E_i)^2}{E_i}$
 
 $\chi^2=\sum_{i=1}^{R}\sum_{j=1}^{C}\frac{(o_{ij}-e_{ij})^2}{e_{ij}}$
 - $o_{ij}:$ observed cell count of $(i, j)$ element in table
-- $e_{ij}:$ expected cell count of $(i, j)$ element in table
-    - $e_{ij}=\frac{row_{i} total \times col_{j} total}{\text{grand total}}$
+- $e_{ij}:$ expected cell count of $(i, j)$ element in table ($e_{ij}=\frac{row_{i} total \times col_{j} total}{\text{grand total}}$)
 - $o_{ij}-e_{ij}: $ residual of cell $(i, j)$
 
 Contingency table (two-way tables, cross-tabulations)
 - 두 카테고리 변수 데이터의 빈도 분포를 보이는데 활용됨
-- $H_0:$ A와 B가 Independent
-- $H_a:$ A와 B가 Independent하지 않다
+- $H_0:$ A와 B가 Independent / $H_a:$ A와 B가 Independent하지 않다
 - $df = (r-1)\cdot(c-1)$
 
 ||B|total|
