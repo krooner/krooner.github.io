@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans'; // $body-font-family;
+  font-family: $body-font-family;
   font-size: inherit;
   line-height: $body-line-height;
   color: $body-text-color;
